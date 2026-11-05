@@ -4,6 +4,8 @@
 
 > 一个 Swiper 11 的轮播作品：6 件展品、6 种内置特效 + 1 种手写 `creative` 变换，键盘 / 滚轮 / 拖拽三通道控制，参数可现场调、结论可现场验。
 
+**在线看**：<https://llleee77.github.io/swiper-lumen/>　·　**提示词记录**：<https://llleee77.github.io/swiper-lumen/prompts.html>
+
 ## 一、入口
 
 | 我要看什么 | 去哪里 |
@@ -13,7 +15,7 @@
 | 任务一的提交文档 | [`提交材料/任务一-提示词工程.md`](提交材料/任务一-提示词工程.md) |
 | 任务二的提交文档 | [`提交材料/任务二-creative仿写.md`](提交材料/任务二-creative仿写.md) |
 | 任务三的提交文档 + 答辩 | [`提交材料/任务三-综合创作与答辩.md`](提交材料/任务三-综合创作与答辩.md) |
-| 在线演示（GitHub Pages） | `https://llleee77.github.io/<仓库名>/` |
+| 在线演示（GitHub Pages） | <https://llleee77.github.io/swiper-lumen/> |
 
 ## 二、三条任务分别落在哪
 
