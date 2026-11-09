@@ -1,10 +1,12 @@
 # 光影展 LUMEN · 轮播实验室
 
+### ▶ 在线演示：<https://llleee77.github.io/swiper-lumen/>
+
+**提示词记录（作业入口）**：<https://llleee77.github.io/swiper-lumen/prompts.html>
+
 课堂任务 06 · **万超然 / 24001011008**
 
 > 一个 Swiper 11 的轮播作品：6 件展品、6 种内置特效 + 1 种手写 `creative` 变换，键盘 / 滚轮 / 拖拽三通道控制，参数可现场调、结论可现场验。
-
-**在线看**：<https://llleee77.github.io/swiper-lumen/>　·　**提示词记录**：<https://llleee77.github.io/swiper-lumen/prompts.html>
 
 ## 一、入口
 
