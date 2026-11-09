@@ -18,6 +18,8 @@
 | 任务二的提交文档 | [`提交材料/任务二-creative仿写.md`](提交材料/任务二-creative仿写.md) |
 | 任务三的提交文档 + 答辩 | [`提交材料/任务三-综合创作与答辩.md`](提交材料/任务三-综合创作与答辩.md) |
 | 在线演示（GitHub Pages） | <https://llleee77.github.io/swiper-lumen/> |
+| A/B 对照实验（答辩道具，两套配置并排跑） | [`debug/index.html`](debug/index.html) |
+| 复现：只引核心包会怎样 | [`debug/core-only.html`](debug/core-only.html) |
 
 ## 二、三条任务分别落在哪
 
@@ -37,7 +39,8 @@
 ├─ css/style.css              两个页面共用
 ├─ js/main.js                 Swiper 初始化 / 特效切换 / 键盘滚轮 / 现场调参
 ├─ vendor/                    swiper-bundle 11.1.14（本地引入，断网可用）
-├─ img/exhibit-06-adora.png   第六件展品，AI 生成后裁成 16:9
+├─ img/                       展品图 + 4 张实拍记录（shot-01 ~ shot-04）
+├─ debug/                     对照实验页 / 核心包复现页（不参与作品主流程）
 └─ 提交材料/                   三份 Markdown 提交件 + AI 生成原图 + 整页截图
 ```
 

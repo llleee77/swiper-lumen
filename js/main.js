@@ -120,6 +120,10 @@
   const qs = new URLSearchParams(location.search);
   if (qs.get('fx') && EFFECTS[qs.get('fx')]) state.fx = qs.get('fx');
   if (qs.get('delay') && Number(qs.get('delay')) > 0) state.delay = Number(qs.get('delay'));
+  if (qs.get('speed') && Number(qs.get('speed')) > 0) state.speed = Number(qs.get('speed'));
+  // ?freeze=380：自动翻一张，并在动画走到 380ms 时把浏览器真实算出的 transform 钉住
+  // 仅用于截图取证，正常访问不触发
+  const freezeAt = Number(qs.get('freeze')) || 0;
   if (qs.get('slide') && Number(qs.get('slide')) > 0) state.start = Number(qs.get('slide')) - 1;
 
   let swiper = null;
@@ -150,6 +154,7 @@
     }
 
     const cfg = Object.assign({}, BASE, EFFECTS[fx] || {}, {
+      speed: state.speed,
       initialSlide: keep,
       autoplay: {
         delay: state.delay,
@@ -352,10 +357,28 @@
   });
   delayRange.value = state.delay;
   delayInput.value = state.delay;
+  speedRange.value = state.speed;
+  speedInput.value = state.speed;
 
   build(state.fx);          // 首屏就是 cube
   paintRange(delayRange);
   paintRange(speedRange);
   sayDelay();
   saySpeed();
+
+  /* ------------------------- 11. 截图取证：冻结动画帧 ------------------------- */
+  if (freezeAt > 0) {
+    setTimeout(() => {
+      swiper.slideNext();
+      setTimeout(() => {
+        swiper.autoplay.stop();
+        swiper.slides.forEach((sl) => {
+          const cs = getComputedStyle(sl);
+          sl.style.transitionDuration = '0ms';
+          sl.style.transform = cs.transform;
+          sl.style.opacity = cs.opacity;
+        });
+      }, freezeAt);
+    }, 500);
+  }
 })();
